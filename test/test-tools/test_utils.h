@@ -11,7 +11,7 @@
 #include <vector>
 #include <iostream>
 #include <cmath>
-#include <dirent.h>
+#include "dirent.h"
 
 #include <Eigen/Core>
 

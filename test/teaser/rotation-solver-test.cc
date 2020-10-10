@@ -20,6 +20,8 @@
 #include "teaser/registration.h"
 #include "test_utils.h"
 
+#define M_PI 3.14159265358979323846
+
 TEST(RotationSolverTest, FGRRotation) {
   double ALLOWED_ROTATION_ERROR = 1e-5;
   // Problem 1: Identity

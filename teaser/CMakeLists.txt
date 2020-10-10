@@ -2,7 +2,7 @@ project(teaser_source)
 include(GNUInstallDirs)
 
 # teaser_io library
-add_library(teaser_io SHARED src/ply_io.cc)
+add_library(teaser_io src/ply_io.cc)
 target_link_libraries(teaser_io PRIVATE tinyply)
 target_include_directories(teaser_io PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
@@ -18,7 +18,7 @@ list(APPEND TEASERPP_EXPORTED_TARGETS teaser_io tinyply)
 add_library(teaserpp::teaser_io ALIAS teaser_io)
 
 # teaser_registration library
-add_library(teaser_registration SHARED
+add_library(teaser_registration
         src/certification.cc
         src/registration.cc
         src/graph.cc
